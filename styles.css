@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+/* Header */
 nav {
     display: flex;
     align-items: center;
@@ -15,6 +17,21 @@ ul {
     gap: 30px;
 }
 
-ul li a{
+ul li {
     list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #301934;
+}
+
+page-logo {
+    color: #301934;
+    cursor: pointer;
+}
+
+github-icon {
+    width: 10px;
+    height: 10px;
 }
