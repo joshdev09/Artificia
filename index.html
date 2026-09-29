@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artificia.io</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Gradient background layer -->
+    <div class="bg-gradient"></div>
+    <!-- Noise texture overlay -->
+    <div class="bg-noise"></div>
+
     <div class="container">
         <header>
             <nav>
@@ -19,13 +27,54 @@
                 </ul>
 
                 <div class="github-icon">
-                    <img src = "img/github-darkmode.png">
+                    <a href="#" aria-label="GitHub">
+                        <img src="img/github-darkmode.png" alt="GitHub">
+                    </a>
                 </div>
             </nav>
         </header>
 
         <main>
+            <section class="hero">
+                <!-- Left: Robot hand with purple overlay -->
+                <div class="hero-image">
+                    <img src="img/ai_hand.png" alt="AI Robotic Hand">
+                    <div class="hero-image-overlay"></div>
+                </div>
 
+                <!-- Right: Content panel -->
+                <div class="hero-content">
+                    <div class="ai-logos">
+                        <img src="img/chatGPT.png" alt="ChatGPT">
+                        <img src="img/deepseek.png" alt="DeepSeek">
+                        <img src="img/Anthropic.png" alt="Anthropic">
+                        <img src="img/nn.png" alt="Neural Network">
+                        <img src="img/codex.png" alt="Codex">
+                        <img src="img/claude.png" alt="Claude">
+                    </div>
+
+                    <h2 class="hero-title">
+                        Understanding<br>
+                        How Artificial<br>
+                        Intelligence<br>
+                        Works
+                    </h2>
+
+                    <p class="hero-subtitle">
+                        Understand the models, tools, and algorithms shaping the future. Clear guides to how AI actually works and how to use it safely.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">
+                            Start Learning
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="btn btn-secondary">Browse AI Tools</a>
+                    </div>
+                </div>
+            </section>
         </main>
     
     </div>
