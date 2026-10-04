@@ -1,86 +1,548 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artificia.io</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Gradient background layer -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTIFICIA.IO - Understanding Artificial Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Righteous&family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="bg-gradient"></div>
-    <!-- Noise texture overlay -->
     <div class="bg-noise"></div>
 
-    <div class="container">
-        <header>
-            <nav>
-                <h1 class="page-logo">ARTIFICIA.IO</h1>
+    <header>
+      <nav>
+        <div class="page-logo">ARTIFICIA.IO</div>
+        <ul class="nav-links">
+          <li><a href="#core-concepts">Core Concepts</a></li>
+          <li><a href="#simulator">Simulator</a></li>
+          <li><a href="#ai-learning">AI Learning</a></li>
+        </ul>
+        <a href="https://github.com" aria-label="GitHub">
+          <span class="github-icon">
+            <img src="img/github-darkmode.png" alt="GitHub" />
+          </span>
+        </a>
+      </nav>
+    </header>
 
-                <ul>
-                    <li><a href="#">Core Concepts</a></li>
-                    <li><a href="#">Simulator</a></li>
-                    <li><a href="#">AI Learning</a></li>
-                </ul>
+    <main>
+      <section class="hero">
+        <div class="hero-image">
+          <img src="img/ai_hand.png" alt="Robot Hand" />
+          <div class="hero-image-overlay"></div>
+        </div>
 
-                <div class="github-icon">
-                    <a href="#" aria-label="GitHub">
-                        <img src="img/github-darkmode.png" alt="GitHub">
-                    </a>
+        <div class="hero-content">
+          <div class="ai-logos">
+            <img src="img/chatGPT.png" alt="ChatGPT" />
+            <img src="img/deepseek.png" alt="DeepSeek" />
+            <img src="img/Anthropic.png" alt="Anthropic" />
+            <img src="img/nn.png" alt="Neural Network" />
+            <img src="img/codex.png" alt="Codex" />
+            <img src="img/claude.png" alt="Claude" />
+          </div>
+          <h1 class="hero-title">
+            UNDERSTANDING HOW ARTIFICIAL INTELLIGENCE WORKS
+          </h1>
+          <p class="hero-subtitle">
+            Understand the models, tools, and algorithms shaping the future.
+            Clear guides to how AI actually works and how to use it safely.
+          </p>
+          <div class="hero-buttons">
+            <a href="#learning" class="btn btn-primary">
+              Start Learning
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>
+            </a>
+            <a href="#tools" class="btn btn-secondary">Browse AI Tools</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stats-header">
+          <h2>
+            Join the 47 Million Software Developers Worldwide Enter the AI Race
+          </h2>
+          <p>
+            The tech landscape is shifting faster than ever. Don't get left
+            behind learn to integrate powerful models, automate complex
+            workflows, and build the next generation of intelligent applications
+            today.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Row 1 -->
+          <div class="bento-card card-neural">
+            <div class="card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="48"
+                height="48"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5M4.5 15.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 5.25 8.25v9a2.25 2.25 0 0 0 2.25 2.25Zm0 0h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 5.25 8.25v9a2.25 2.25 0 0 0 2.25 2.25Z"
+                />
+              </svg>
+            </div>
+            <h3>Neural Agents</h3>
+            <p>
+              Self Learning models that adapt to your data infrastructure.
+              Automate complex decision-making.
+            </p>
+          </div>
+
+          <div class="bento-card card-active-models">
+            <h3>Active Models</h3>
+            <div class="subtitle">03 LLMs Connected</div>
+            <div class="model-icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bento-card card-speed">
+            <div class="speed-value">100x</div>
+            <h3>Processing Speed</h3>
+            <p>
+              Self Learning models that adapt to your data infrastructure.
+              Automate complex decision-making.
+            </p>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="bento-card card-confidence">
+            <div class="confidence-header">
+              <div class="confidence-label">Output Accuracy</div>
+              <div class="badge">High Precision</div>
+            </div>
+            <div class="confidence-value">99.9%</div>
+            <div class="confidence-footer">
+              <span>Hallucination Rate</span>
+              <span>Model Reliability</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-grid bento-bottom">
+          <div class="card-autotrain">
+            <div class="toggle-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+            </div>
+            <span>Auto Train</span>
+            <div class="toggle-switch"></div>
+          </div>
+
+          <div class="card-natural-lang">
+            <div style="display: flex; gap: 16px; align-items: center">
+              <div
+                style="
+                  background-color: #e2e2e2;
+                  padding: 12px;
+                  border-radius: 12px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  width="24"
+                  height="24"
+                  style="color: #895b8a"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 style="font-size: 1rem; font-weight: 700">
+                  Natural Language
+                </h3>
+                <p style="font-size: 0.75rem; color: #666; margin-top: 4px">
+                  Control your infrastructure using plain English commands
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.808 3.808 9.981 0 13.789M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                width="20"
+                height="20"
+                style="color: #000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="core-concepts">
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>AI Models: The Engines of Intelligence</h3>
+            <p>
+              A model is the "brain" of an AI system. It is a mathematical
+              representation that applies learned patterns to make predictions,
+              decisions, or generate new content based on massive datasets.
+            </p>
+            <h4>Traditional ML Models:</h4>
+            <p>
+              Analyze existing data to predict outcomes (like forecasting
+              inventory or classifying spam).
+            </p>
+            <h4>Generative AI &amp; LLMs:</h4>
+            <p>
+              Create net-new text, images, or code by predicting what should
+              come next in a sequence.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Algorithms: The Logic of Learning</h3>
+            <p>
+              Algorithms process data to identify patterns and relationships.
+              They are the computational rules that allow a machine to learn
+              without being explicitly hard-coded.
+            </p>
+            <h4>Supervised Learning:</h4>
+            <p>Trains on clearly labeled data to learn exact relationships.</p>
+            <h4>Unsupervised Learning:</h4>
+            <p>
+              Analyzes raw, unlabeled data to find hidden structures or group
+              similar items together.
+            </p>
+            <h4>Reinforcement Learning:</h4>
+            <p>
+              Learns through trial and error, receiving a mathematical "reward"
+              for making the correct sequence of decisions to achieve a goal.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Neural Agents &amp; Tooling: From Chat to Action</h3>
+            <p>
+              AI is moving beyond static text boxes. Agents are autonomous
+              systems that define their own logic to solve complex problems.
+            </p>
+            <h4>Tool Calling:</h4>
+            <p>
+              Giving models the ability to reach out and trigger external
+              functions—like querying a database, searching the web, or pinging
+              an API.
+            </p>
+            <h4>Agent Memory:</h4>
+            <p>
+              Allowing systems to retain context across a long session to handle
+              multi-step workflows independently.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>Neural Agents &amp; Tooling: From Chat to Action</h3>
+            <p>
+              AI is moving beyond static text boxes. Agents are autonomous
+              systems that define their own logic to solve complex problems.
+            </p>
+            <h4>Tool Calling:</h4>
+            <p>
+              Giving models the ability to reach out and trigger external
+              functions—like querying a database, searching the web, or pinging
+              an API.
+            </p>
+            <h4>Agent Memory:</h4>
+            <p>
+              Allowing systems to retain context across a long session to handle
+              multi-step workflows independently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="simulator-section" id="simulator">
+        <h2>Nueral Network Simulator</h2>
+        <div class="simulator-layout">
+          <div class="simulator-controls">
+            <div class="controls-card">
+              <div class="controls-top">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  width="22"
+                  height="22"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  width="22"
+                  height="22"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3"
+                  />
+                </svg>
+                <div style="margin-left: auto; text-align: right">
+                  <span class="epoch-label">Epoch</span><br />
+                  <span class="epoch-value">000,000</span>
                 </div>
-            </nav>
-        </header>
-
-        <main>
-            <section class="hero">
-                <!-- Left: Robot hand with purple overlay -->
-                <div class="hero-image">
-                    <img src="img/ai_hand.png" alt="AI Robotic Hand">
-                    <div class="hero-image-overlay"></div>
-                </div>
-
-                <!-- Right: Content panel -->
-                <div class="hero-content">
-                    <div class="ai-logos">
-                        <img src="img/chatGPT.png" alt="ChatGPT">
-                        <img src="img/deepseek.png" alt="DeepSeek">
-                        <img src="img/Anthropic.png" alt="Anthropic">
-                        <img src="img/nn.png" alt="Neural Network">
-                        <img src="img/codex.png" alt="Codex">
-                        <img src="img/claude.png" alt="Claude">
-                    </div>
-
-                    <h2 class="hero-title">
-                        Understanding<br>
-                        How Artificial<br>
-                        Intelligence<br>
-                        Works
-                    </h2>
-
-                    <p class="hero-subtitle">
-                        Understand the models, tools, and algorithms shaping the future. Clear guides to how AI actually works and how to use it safely.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary">
-                            Start Learning
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="btn btn-secondary">Browse AI Tools</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-    
-    </div>
+              </div>
+              <ul class="controls-list">
+                <li>
+                  <span class="label">Learning Rate</span
+                  ><span class="value">00.3</span>
+                </li>
+                <li>
+                  <span class="label">Activation</span
+                  ><span class="value">Tanh</span>
+                </li>
+                <li>
+                  <span class="label">Regularization</span
+                  ><span class="value">None</span>
+                </li>
+                <li>
+                  <span class="label">Regularization Rate</span
+                  ><span class="value">0</span>
+                </li>
+                <li>
+                  <span class="label">Problem Type</span
+                  ><span class="value">Classification</span>
+                </li>
+              </ul>
+            </div>
+            <p class="simulator-description">
+              A neural network simulator is a software tool used to design,
+              test, train, and visualize artificial or biological neural
+              networks without needing to build physical hardware or write
+              complex code from scratch.
+            </p>
+          </div>
+          <div class="simulator-visual">
+            <img src="img/nueral_network.png" alt="Neural Network" />
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-        
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>ARTIFICIA.IO</h2>
+          <p>
+            Not magic, just math. We are here to make understanding artificial
+            intelligence easy, accessible, and fun for the curious mind.
+          </p>
+          <div class="credit">Made by Joshua Emmanuel M. Halili</div>
+        </div>
+        <div class="footer-right">
+          <div class="copyright">© 2026 ARTICIA.IO</div>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1.5"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <img src="img/github-darkmode.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
