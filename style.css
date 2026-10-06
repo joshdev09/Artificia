@@ -72,20 +72,33 @@ nav {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Desktop-specific layout mapping */
+.mobile-menu-btn { display: none; }
+.mobile-logo { display: none; }
+.desktop-logo { display: block; }
+
 .page-logo {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 1.5px;
+  font-size: 1.8rem; 
+  letter-spacing: -1px; 
   color: #301934;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20%;
 }
 
 .nav-links {
   display: flex;
   gap: 35px;
   list-style: none;
-  margin-left: auto;
-  margin-right: 20%;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -668,16 +681,170 @@ footer {
 }
 
 /* ==========================================================================
-   RESPONSIVE
+   LEARNING PAGE
+   ========================================================================== */
+.learning-page {
+  background-color: #F9F6EE;
+}
+
+.learning-container {
+  max-width: 1000px;
+  margin: 60px auto 100px;
+  padding: 0 40px;
+}
+
+.learning-hero {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.learning-text-col {
+  flex: 1;
+}
+
+.learning-img-col {
+  flex: 0 0 45%;
+}
+
+.learning-img-col img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.learning-page h1, .learning-page h2 {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a2e;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.learning-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.learning-page h2 {
+  font-size: 1.8rem;
+  margin-top: 50px;
+}
+
+.learning-page .author {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.learning-page .author a {
+  color: #555;
+  text-decoration: none;
+}
+
+.learning-page p {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.learning-section {
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .learning-hero {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE (MOBILE FIXES)
    ========================================================================== */
 @media (max-width: 900px) {
+  /* Navbar Overrides */
+  nav {
+    padding: 15px 25px;
+    /* The transparent overrides were removed here so the glass 
+       effect remains visible on mobile when scrolling. */
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  /* Hamburger Menu Button */
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    color: #301934;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    z-index: 101; 
+  }
+
+  /* Glassmorphism Dropdown */
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    left: 25px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    width: calc(100vw - 120px);
+    max-width: 260px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    
+    /* Hidden State */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+
+  /* Active State (Toggled via JS) */
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .mobile-logo {
+    display: block;
+    margin-top: 24px;
+    font-size: 1.4rem;
+  }
+
+  /* Hero Section Mobile Overrides */
   .hero {
     flex-direction: column;
   }
 
   .hero-image {
-    flex: none;
-    height: 50vh;
+    display: none; 
   }
 
   .hero-content {
@@ -685,32 +852,40 @@ footer {
     flex: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px 25px 50px;
-    margin-right: -20px;
-    text-align: center;
+    align-items: flex-start; 
+    padding: 20px 25px 50px;
+    text-align: left; 
     margin-left: 0; 
   }
 
   .ai-logos {
-    justify-content: center;
+    width: 100%;
+    justify-content: flex-end; 
+    margin-bottom: 20px;
   }
 
   .hero-subtitle {
-    max-width: 420px;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
   }
 
   .hero-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start; /* Left aligns the buttons */
+    gap: 12px;
+    width: 100%;
   }
 
-  .nav-links {
-    margin-right: auto;
-    gap: 20px;
+  .hero-buttons .btn {
+    min-width: auto;
+    padding: 14px 20px;
+    font-size: 0.75rem;
   }
 
-  /* Reset grid areas for mobile stack */
+  /* Bento Grid Mobile Stacking */
   .bento-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -734,9 +909,5 @@ footer {
 
   .simulator-layout {
     flex-direction: column;
-  }
-
-  nav {
-    padding: 15px 25px;
   }
 }

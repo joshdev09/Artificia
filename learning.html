@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>ARTIFICIA.IO - AI Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Righteous&family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="learning-page">
+    <header>
+      <nav>
+        <!-- Mobile Burger Button (Heroicons) -->
+        <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+          <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="display: none;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Desktop Logo -->
+        <a href="index.html" class="page-logo desktop-logo">ARTIFICIA.IO</a>
+        
+        <!-- Nav Menu Container -->
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html#core-concepts">Core Concepts</a></li>
+            <li><a href="index.html#simulator">Simulator</a></li>
+            <li><a href="learning.html">AI Learning</a></li>
+          </ul>
+          <!-- Mobile Dropdown Logo -->
+          <a href="index.html" class="page-logo mobile-logo">ARTIFICIA.IO</a>
+        </div>
+
+        <!-- GitHub Link -->
+        <a href="https://github.com" aria-label="GitHub" class="github-link">
+          <span class="github-icon">
+            <img src="img/github-darkmode.png" alt="GitHub" />
+          </span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="learning-container">
+      <section class="learning-hero">
+        <div class="learning-text-col">
+          <h1>What is AI?</h1>
+          <p class="author">
+            By
+            <a
+              href="https://www.ibm.com/think/author/cole-stryker.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cole Stryker</a
+            >
+            and
+            <a
+              href="https://www.ibm.com/think/author/eda-kavlakoglu.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Eda Kavlakoglu</a
+            >
+          </p>
+          <p>
+            Artificial intelligence (AI) is a technology that enables computers
+            and machines to perform tasks that normally require human
+            intelligence, such as learning, problem-solving, decision-making,
+            and understanding language.
+          </p>
+          <p>
+            AI-powered systems can recognize objects, process information,
+            communicate with people, and provide recommendations. Some can also
+            perform tasks independently, reducing the need for direct human
+            involvement.
+          </p>
+          <p>
+            Today, much of the focus is on generative AI, which can create new
+            content such as text, images, and videos. Generative AI is built on
+            technologies such as machine learning (ML) and deep learning.
+          </p>
+        </div>
+        <div class="learning-img-col">
+          <img src="img/brain.png" alt="AI Visualization" />
+        </div>
+      </section>
+
+      <section class="learning-section">
+        <h2>Machine Learning</h2>
+        <p>
+          Machine learning (ML) is a branch of artificial intelligence that
+          allows computers to learn from data and make predictions or decisions
+          without being specifically programmed for every task.
+        </p>
+        <p>
+          There are different machine learning methods, including linear
+          regression, logistic regression, decision trees, random forests,
+          support vector machines, K-nearest neighbors, and clustering. Each
+          method is designed for different types of problems and data.
+        </p>
+        <p>
+          One widely used ML method is the neural network, which is inspired by
+          the structure of the human brain. It uses interconnected layers to
+          process information and identify complex patterns in large amounts of
+          data.
+        </p>
+        <p>
+          A basic type of ML is supervised learning, where algorithms are
+          trained using labeled data. The system learns the relationship between
+          inputs and their expected outputs so it can make predictions when
+          given new data.
+        </p>
+      </section>
+
+      <section class="learning-section">
+        <h2>Deep Learning</h2>
+        <p>
+          Deep learning is a specialized branch of machine learning that uses
+          multiple layers of neural networks to perform complex tasks and make
+          decisions in ways inspired by the human brain.
+        </p>
+        <p>
+          Deep neural networks contain an input layer, several hidden layers,
+          and an output layer. Compared with traditional neural networks, deep
+          learning models typically use many more hidden layers to process
+          information.
+        </p>
+        <p>
+          These layers allow deep learning systems to learn important features
+          from large amounts of unlabeled and unstructured data with little
+          human assistance. The models can then identify patterns and make
+          predictions based on what they have learned.
+        </p>
+        <p>
+          Deep learning is commonly used in areas such as natural language
+          processing, computer vision, and other applications that require
+          recognizing complex patterns in large datasets. It is also a major
+          technology behind many modern AI systems.
+        </p>
+      </section>
+    </main>
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const menuIcon = document.querySelector('.menu-icon');
+      const closeIcon = document.querySelector('.close-icon');
+
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        
+        if (navMenu.classList.contains('active')) {
+          menuIcon.style.display = 'none';
+          closeIcon.style.display = 'block';
+        } else {
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
